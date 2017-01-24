@@ -38,35 +38,6 @@ class Array
     true
   end
 
-  # def self.numout(input)
-  #   if input.class != Array
-  #     input
-  #   else
-  #     idx = 0
-  #     input.length.times do
-  #       try_again = input[idx]
-  #       idx += 1
-  #       Array.numout(try_again)
-  #     end
-  #
-  #   end
-  # end
-  #
-  # def self.flat_array(ary)
-  #   if ary.class != Array
-  #     [ary]
-  #   else
-  #     flatten = []
-  #     idx = 0
-  #     ary.length.times do
-  #       try_again = ary[idx]
-  #       idx += 1
-  #       flatten << Array.numout(try_again)
-  #     end
-  #     flatten
-  #   end
-  # end
-
   def my_flatten
     answer = []
 
