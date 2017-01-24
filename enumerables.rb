@@ -1,12 +1,8 @@
 require 'byebug'
 class Array
-
   def my_each(&prc)
-    post = 0
-
-    while post < self.length
-      prc.call(self[post])
-      post += 1
+    self.length.times do |i|
+      prc.call(self[i])
     end
 
     self
@@ -53,7 +49,7 @@ class Array
     max_array = args.map(&:length).max
     array = Array.new
 
-    (0...max_array).to_a.my_each do |idx|
+    self.length.times do |idx|
       row = []
       args.my_each { |sub_ary| row << sub_ary[idx] }
       array << row
