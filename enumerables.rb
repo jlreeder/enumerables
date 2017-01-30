@@ -46,16 +46,15 @@ class Array
 
   def my_zip(*args)
     args.unshift(self)
-    max_array = args.map(&:length).max
-    array = Array.new
+    zipped = Array.new
 
-    self.length.times do |idx|
+    length.times do |idx|
       row = []
       args.my_each { |sub_ary| row << sub_ary[idx] }
-      array << row
+      zipped << row
     end
 
-    array
+    zipped
   end
 
 end
